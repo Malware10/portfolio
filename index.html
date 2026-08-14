@@ -1,56 +1,274 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio - Abdoulaye Diagne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdoulaye Diagne | Développeur IA & Full-Stack</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Abdoulaye Diagne</h1>
-        <p>Développeur IA | Data Analyst | Full Stack</p>
-        <button onclick="toggleTheme()">Changer le thème</button>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="brand-first">Abdoulaye</span><span class="brand-last">.dev</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#about">À propos</a>
+            <a href="#skills">Compétences</a>
+            <a href="#experience">Expérience</a>
+            <a href="#projects">Projets GitHub</a>
+            <a href="#contact" class="btn-nav">Me contacter</a>
+        </nav>
+        <button id="theme-toggle" class="theme-btn" onclick="toggleTheme()" aria-label="Changer de thème">
+            <i class="fa-solid me-fa-moon fa-moon"></i>
+        </button>
     </header>
 
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>
-            Étudiant en Intelligence Artificielle appliquée à l’informatique.
-            Passionné par le Machine Learning, le développement web et mobile.
-        </p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge-status">
+                <span class="status-dot"></span> Disponible pour de nouvelles opportunités
+            </div>
+            <h1>Elhadji Abdoulaye Diagne</h1>
+            <p class="subtitle">Développeur Logiciel & Spécialiste en IA Appliquée</p>
+            <p class="description">
+                Passionné par la création de solutions intelligentes et évolutives. Je combine expertise en **Machine Learning / IA** et compétences **Full-Stack (React, Node, Spring Boot, Flutter)** pour concevoir des applications à fort impact.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-code"></i> Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Me contacter</a>
+                <a href="https://github.com/Malware10" target="_blank" class="btn btn-icon" title="Profil GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-card-glass">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="code-title">developer_profile.py</span>
+                </div>
+                <pre><code><span class="keyword">class</span> <span class="class-name">Developer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        self.name = <span class="string">"Abdoulaye Diagne"</span>
+        self.role = <span class="string">"AI & Full-Stack Developer"</span>
+        self.location = <span class="string">"Toronto, ON 🇨🇦"</span>
+        self.stack = [<span class="string">"Python"</span>, <span class="string">"React"</span>, <span class="string">"Spring Boot"</span>, <span class="string">"Flutter"</span>]
+        
+    <span class="keyword">def</span> <span class="function">get_mission</span>(self):
+        <span class="keyword">return</span> <span class="string">"Concevoir des logiciels performants et des modèles d'IA innovants."</span></code></pre>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Mes Projets</h2>
+    <!-- Section Compétences Tech -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Compétences Techniques</h2>
+        <p class="section-sub">Un aperçu des technologies et outils que j'utilise au quotidien.</p>
 
-        <div class="card">
-            <h3>Projet Machine Learning</h3>
-            <p>Classification avec TF-IDF et Logistic Regression</p>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3>IA & Data Science</h3>
+                <div class="tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">LLMs / IA Générative</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Pandas / NumPy</span>
+                    <span class="tag">Scikit-Learn</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                <h3>Développement Web & Mobile</h3>
+                <div class="tags">
+                    <span class="tag">React / React Native</span>
+                    <span class="tag">Angular</span>
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Node.js (Express)</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">PHP</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                <h3>Bases de données & Systèmes</h3>
+                <div class="tags">
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">Oracle</span>
+                    <span class="tag">Linux / Windows Server</span>
+                    <span class="tag">Git & CI/CD</span>
+                </div>
+            </div>
         </div>
-
-        <div class="card">
-            <h3>Application Flutter</h3>
-            <p>Application de détection de langue avec backend Python</p>
-        </div>
-
-        <div class="card">
-            <h3>Site Angular</h3>
-            <p>Développement d’un site moderne avec Angular & API REST</p>
-        </div>
-
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : abdoulaye062012@gmail.com</p>
-        <p>Localisation : Gatineau, QC</p>
+    <!-- Section Expérience Professionnelle -->
+    <section id="experience" class="section">
+        <h2 class="section-title">Parcours & Expériences</h2>
+        <p class="section-sub">Mon cheminement académique et professionnel.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Janvier 2022 – Avril 2024</span>
+                    <h3>Développeur Junior</h3>
+                    <h4 class="company">ATOS — Dakar, Sénégal</h4>
+                    <ul>
+                        <li>Développement d'APIs RESTful évolutives et sécurisées avec Spring Boot et Node.js.</li>
+                        <li>Création d'applications mobiles performantes multiplateformes en Flutter et React Native.</li>
+                        <li>Modélisation et optimisation de bases de données relationnelles (MySQL, PostgreSQL) et non-relationnelles.</li>
+                        <li>Conception de maquettes et prototypes UI/UX collaboratifs.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2024 – 2026</span>
+                    <h3>DEC en Intelligence Artificielle Appliquée</h3>
+                    <h4 class="company">Collège La Cité — Ottawa, Ontario</h4>
+                    <p>Spécialisation dans les algorithmes de Machine Learning, les réseaux de neurones, la vision par ordinateur et l'automatisation par l'IA.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023 – 2024</span>
+                    <h3>Licence en Génie Logiciel, Réseaux et Systèmes</h3>
+                    <h4 class="company">Institut Supérieur de Management (ISM) — Dakar</h4>
+                    <p>Formation approfondie en ingénierie logicielle, architecture système, réseaux et sécurité informatique.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Section Projets GitHub -->
+    <section id="projects" class="section">
+        <div class="section-header-flex">
+            <div>
+                <h2 class="section-title">Projets GitHub & Réalisations</h2>
+                <p class="section-sub">Découvrez une sélection de mes derniers projets open source.</p>
+            </div>
+            <a href="https://github.com/Malware10" target="_blank" class="btn btn-secondary">
+                <i class="fa-brands fa-github"></i> Explorer GitHub
+            </a>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Projet 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fa-regular fa-folder-open folder-icon"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/Malware10" target="_blank" title="Code Source"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Moteur de Classification ML</h3>
+                <p class="project-desc">Algorithme de traitement de texte et classification NLP utilisant TF-IDF et la Régression Logistique pour l'analyse prédictive de données textuelles.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Scikit-Learn</span>
+                    <span>NLP</span>
+                    <span>TF-IDF</span>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fa-regular fa-folder-open folder-icon"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/Malware10" target="_blank" title="Code Source"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Détection de Langue Mobile</h3>
+                <p class="project-desc">Application mobile multiplateforme développée avec Flutter liée à un microservice backend Python pour la reconnaissance linguistique instantanée.</p>
+                <div class="project-tags">
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Python API</span>
+                    <span>FastAPI</span>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fa-regular fa-folder-open folder-icon"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/Malware10" target="_blank" title="Code Source"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Plateforme Web Angular</h3>
+                <p class="project-desc">Interface d'administration web moderne et responsive intégrant la consommation d'APIs REST, la gestion d'état et un design réactif.</p>
+                <div class="project-tags">
+                    <span>Angular</span>
+                    <span>TypeScript</span>
+                    <span>REST API</span>
+                    <span>RxJS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <div class="contact-card-glass">
+            <div class="contact-info">
+                <h2>Travaillons ensemble !</h2>
+                <p>Je suis à la recherche de nouvelles opportunités en développement logiciel, IA ou analyse de données. N'hésitez pas à me contacter.</p>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>abdoulaye062012@gmail.com</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Gatineau, QC, Canada</span>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message envoyé !');">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="votre@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Bonjour Abdoulaye, nous aimerions échanger avec vous..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full"><i class="fa-solid fa-paper-plane"></i> Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Abdoulaye Diagne</p>
+        <p>© 2026 Abdoulaye Diagne. Conçu avec soin pour une expérience utilisateur moderne.</p>
     </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
